@@ -49,7 +49,7 @@ To make the algorithm more robust, we modified the implementation:
 
 ---
 
-## 📌 Example
+## Example
 
 Dataset:
 
@@ -64,7 +64,7 @@ points = [
 
 ---
 
-## 🎯 Why This Matters
+## Why This Matters
 
 Implementing these fixes helps us understand that:
 
@@ -75,7 +75,7 @@ Implementing these fixes helps us understand that:
 
 ---
 
-## 🚀 Next Step
+## Next Step
 
 - Visualize results with Matplotlib (color-coded clusters).  
 - Compare our manual implementation with Scikit-Learn’s `KMeans` and confirm consistency.
