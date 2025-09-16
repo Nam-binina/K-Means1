@@ -75,7 +75,7 @@ Implementing these fixes helps us understand that:
 
 ---
 
-## Next Step
+## Next Steps
 
 - Visualize results with Matplotlib (color-coded clusters).  
 - Compare our manual implementation with Scikit-Learn’s `KMeans` and confirm consistency.
