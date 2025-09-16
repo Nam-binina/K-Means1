@@ -28,18 +28,17 @@ def center(points):
     
 
 def kmeans(points,ncenter):
-    center = firstcenter(points,ncenter)
+    centers = firstcenter(points,ncenter)
     optimal = True
+    array = centers.copy()
     while optimal:
-        
-        optimal = convergence()
-    
-array = np.array([1,2,3])
-
-point1 = [1,2]
-point2 = [1,5]
-
-print(distance(point1,point2))
-
-i = firstcenter(array,1)
-print(f"{i}")
+        temparray = [[] for _ in range(ncenter)]
+        for i in range(0,len(points)):
+            if points[i] not in centers:
+                distances = [distance(i, c) for c in centers]  # distance à définir (ex: euclidienne)
+                min_index = distances.index(min(distances))
+                temparray[min_index].append(i)
+            newcenter = [center(j) for j in temparray]
+        optimal = convergence(center,newcenter)
+        center = newcenter
+    return array
